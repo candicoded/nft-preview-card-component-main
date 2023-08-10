@@ -1,0 +1,171 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  padding: 1.5em 1.5em 0.5em 1.5em;
+  width: 90%;
+}
+
+.cube-img {
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+.creator {
+  color: var(--white);
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 1em 0 0.7em 0;
+}
+
+h1:active,
+.creator:active {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+p {
+  font-size: 1rem;
+  padding-bottom: 1em;
+  line-height: 1.5rem;
+}
+
+p,
+.days,
+.creation {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.eth {
+  color: var(--cyan);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eth img,
+.days img {
+  margin-right: 0.5em;
+}
+
+hr {
+  border: 1px solid var(--line);
+}
+
+.creator-section {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+
+.creator-section img {
+  width: 12%;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.creation {
+  margin-top: 1em;
+}
+
+.creator {
+  font-weight: 400;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 12px;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--cyan);
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 255, 247, 0.5);
+  border-radius: 10px;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 400px) {
+  main {
+    max-width: 325px;
+  }
+
+  h1:hover,
+  .creator:hover {
+    color: var(--cyan);
+    cursor: pointer;
+  }
+}
